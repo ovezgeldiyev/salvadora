@@ -1,0 +1,45 @@
+@use "./stylesheet.scss" as *;
+@use "./lightgallery-bundle.css" as *;
+@use "./lg-thumbnail.css" as *;
+@use "./lg-zoom.css" as *;
+@use "./animate.css" as *;
+@use "./components/mixin/mixin.scss" as *;
+// 1-main components
+@use "./components/1-main/variables.scss" as *;
+@use "./components/1-main/nulifier.scss" as *;
+// 2-layout components
+@use "./components/2-layout/components.scss" as *;
+@use "./components/2-layout/header.scss" as *;
+@use "./components/2-layout/nav.scss" as *;
+@use "./components/2-layout/intro.scss" as *;
+@use "./components/2-layout/news.scss" as *;
+@use "./components/2-layout/reference.scss" as *;
+@use "./components/2-layout/discover.scss" as *;
+@use "./components/2-layout/partners.scss" as *;
+@use "./components/2-layout/footer.scss" as *;
+@use "./components/2-layout/swiper.scss" as *;
+
+@use "./components/2-layout/team.scss" as *;
+@use "./components/2-layout/join.scss" as *;
+
+// 3-pages components
+// home page
+@use "./components/3-pages/home/hero.scss" as *;
+@use "./components/3-pages/home/envir.scss" as *;
+@use "./components/3-pages/home/services.scss" as *;
+@use "./components/3-pages/home/info.scss" as *;
+// service page
+@use "./components/3-pages/service/occupancy.scss" as *;
+@use "./components/3-pages/service/gallery.scss" as *;
+// pricing page
+@use "./components/3-pages/pricing/pricing.scss" as *;
+@use "./components/3-pages/pricing/faq.scss" as *;
+// about page
+@use "./components/3-pages/about/about.scss" as *;
+// visit page
+@use "./components/3-pages/visit/visit.scss" as *;
+// contact page
+@use "./components/3-pages/contact/contact.scss" as *;
+@use "./components/3-pages/contact/form.scss" as *;
+// typography page
+@use "./components/3-pages/typography.scss" as *;

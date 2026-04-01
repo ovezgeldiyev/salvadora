@@ -1,0 +1,91 @@
+@use "../mixin/mixin.scss" as *;
+@use "../1-main/variables.scss" as *;
+.team {
+  &__inner {
+    padding: 96px 0 64px;
+    &-top {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      h2 {
+        flex: 1;
+      }
+      .link {
+        margin-left: 32px;
+      }
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -24px -5px;
+    }
+  }
+  &Item {
+    width: calc(33.3% - 10px);
+    margin: 24px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $black3;
+    &__image {
+      width: 60%;
+      max-width: 180px;
+      display: flex;
+      margin-bottom: 16px;
+      img {
+        width: 100%;
+      }
+    }
+    h4 {
+      color: $main;
+      margin-bottom: 8px;
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .team {
+    margin: 112px 0;
+  }
+}
+// 930px
+@include md-lg {
+  .team {
+    margin: 96px 0;
+    &__inner {
+      &-row {
+        flex-direction: column;
+      }
+    }
+    &Item {
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 24px;
+      &:last-child {
+        margin: 0;
+      }
+      &__link {
+        max-width: unset;
+      }
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .team {
+    &Item {
+      &__info {
+        flex-direction: column;
+      }
+      &__link {
+        width: 100%;
+        margin-bottom: 24px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

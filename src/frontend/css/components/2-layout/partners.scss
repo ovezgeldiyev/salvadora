@@ -1,0 +1,58 @@
+@use "../mixin/mixin.scss" as *;
+@use "../1-main/variables.scss" as *;
+.partners {
+  margin: 112px 0 48px;
+  &.big {
+    margin: 128px 0;
+  }
+  &__inner {
+    max-width: 1144px;
+    margin: 0 auto;
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &Logo {
+    display: flex;
+    height: 28px;
+    img {
+      height: 100%;
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .partners {
+    &.big {
+      margin: 112px 0;
+    }
+  }
+}
+// 930px
+@include md-lg {
+  .partners {
+    &.big {
+      margin: 96px 0;
+    }
+    &__inner {
+      &-row {
+        margin: -16px;
+        justify-content: center;
+      }
+    }
+    &Logo {
+      height: 24px;
+      margin: 16px;
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .partners {
+    &Logo {
+      height: 20px;
+    }
+  }
+}

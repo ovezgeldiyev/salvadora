@@ -1,0 +1,231 @@
+@use "../mixin/mixin.scss" as *;
+@use "../1-main/variables.scss" as *;
+html,
+body {
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+button {
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($color: #000, $alpha: 0.2);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($color: #000, $alpha: 0.3);
+}
+/*** 
+====================================================================
+Global Settings
+====================================================================
+   ***/
+body {
+  font-family: $mainFont;
+  color: $white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 145%;
+  background: $main;
+  &.active {
+    overflow: hidden;
+  }
+}
+a {
+  text-decoration: none;
+  opacity: 1;
+  color: $black3;
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.88;
+  }
+}
+ul {
+  li {
+    list-style: none;
+  }
+}
+.auto__container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.editor-block {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 24px;
+    color: $main;
+    text-transform: uppercase;
+    font-family: $titleFont;
+  }
+  p {
+    margin-bottom: 24px;
+    font-weight: 400;
+    &:last-child {
+      margin: 0;
+    }
+    a {
+      color: $primary;
+    }
+  }
+  ul {
+    padding-left: 24px;
+    margin-bottom: 32px;
+    &:last-child {
+      margin: 0;
+    }
+    li {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 16px;
+      list-style: disc;
+      &:last-child {
+        margin: 0;
+      }
+      h6 {
+        font-family: $mainFont;
+        color: $black3;
+        margin-bottom: 12px;
+        text-transform: unset;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+      }
+    }
+  }
+  ol {
+    padding-left: 45px;
+    margin-bottom: 20px;
+    &:last-child {
+      margin: 0;
+    }
+    li {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 16px;
+      list-style: decimal;
+      list-style-type: decimal-leading-zero;
+      &:last-child {
+        margin: 0;
+      }
+      &::marker {
+        font-weight: 700;
+      }
+      h6 {
+        font-family: $mainFont;
+        color: $black3;
+        margin-bottom: 12px;
+        text-transform: unset;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+      }
+    }
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    tr {
+      border-bottom: 1px solid rgba(46, 87, 153, 0.2);
+
+      th,
+      td {
+        width: 20%;
+        text-align: center;
+        font-family: $mainFont;
+        padding: 16px 8px;
+        &:first-child {
+          padding-left: 0;
+          text-align: start;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+      th {
+        white-space: nowrap;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        color: $primary;
+        padding-top: 0;
+      }
+      td {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        color: $black3;
+        padding: 16px 8px;
+        text-align: center;
+        h6 {
+          display: none;
+        }
+        p {
+          font-weight: 500;
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:last-child {
+          border: unset;
+          td {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .table {
+    &__wrapper {
+      overflow: hidden;
+      overflow-x: auto;
+      padding: 24px;
+      background: linear-gradient(
+        180deg,
+        rgba(46, 87, 153, 0) 0%,
+        rgba(46, 87, 153, 0.1) 100%
+      );
+      border-radius: 24px;
+      border: 1px solid #c7dbec;
+    }
+  }
+}

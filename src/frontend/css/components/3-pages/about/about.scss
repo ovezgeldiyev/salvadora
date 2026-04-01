@@ -1,0 +1,135 @@
+@use "../../mixin/mixin.scss" as *;
+@use "../../1-main/variables.scss" as *;
+.about {
+  margin: 64px 0 128px;
+  &__inner {
+    &-title {
+      margin-bottom: 48px;
+    }
+    &-banner {
+      width: 100%;
+      border-radius: 18px;
+      height: 300px;
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 24px;
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        pointer-events: none;
+      }
+      img {
+        @include fullImage;
+      }
+    }
+    &-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+  &Content {
+    width: calc(58% - 20px);
+    max-width: 660px;
+    .paragraph {
+      margin-bottom: 32px;
+    }
+  }
+  &Image {
+    width: calc(42% - 20px);
+    max-width: 465px;
+    border-radius: 18px;
+    overflow: hidden;
+    &__inner {
+      width: 100%;
+      position: relative;
+      padding-bottom: 81.5%;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        pointer-events: none;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .about {
+    margin: 56px 0 112px;
+    &__inner {
+      &-row {
+        align-items: center;
+      }
+    }
+  }
+}
+// 930px
+@include md-lg {
+  .about {
+    margin: 48px 0 96px;
+    &__inner {
+      &-title {
+        margin-bottom: 32px;
+      }
+      &-row {
+        flex-direction: column;
+      }
+    }
+    &Content {
+      width: 100%;
+      max-width: unset;
+    }
+    &Image {
+      width: 100%;
+      max-width: unset;
+      order: -1;
+      border-radius: 24px;
+      margin-bottom: 32px;
+      &__inner {
+        padding-bottom: 44%;
+      }
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .about {
+    &__inner {
+      &-title {
+        text-align: center;
+      }
+      &-banner {
+        border-radius: 24px;
+      }
+    }
+    &Content {
+      text-align: center;
+      .button {
+        margin: 0 0 16px 0;
+        &__row {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

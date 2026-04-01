@@ -1,0 +1,229 @@
+@use "../../mixin/mixin.scss" as *;
+@use "../../1-main/variables.scss" as *;
+.pricing {
+  margin: 64px 0 128px;
+  &__inner {
+    &-title {
+      text-align: center;
+      max-width: 644px;
+      margin: 0 auto 48px;
+      h1,
+      h2 {
+        margin-bottom: 24px;
+      }
+      .paragraph {
+        max-width: 584px;
+        margin: 0 auto 32px;
+      }
+    }
+    &-wrapper {
+      max-width: 994px;
+      margin: 0 auto;
+      padding: 24px;
+      background: linear-gradient(
+        180deg,
+        rgba(46, 87, 153, 0) 0%,
+        rgba(46, 87, 153, 0.1) 100%
+      );
+      border-radius: 24px;
+      border: 1px solid #c7dbec;
+    }
+  }
+  &Tabs {
+    display: flex;
+    justify-content: center;
+    &__inner {
+      display: flex;
+      button {
+        font-family: $mainFont;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        color: #6b6b6b;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 32px 20px;
+        background: transparent;
+        cursor: pointer;
+        transition: 0.3s ease;
+        position: relative;
+        &::before {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          content: "";
+          background: $primary;
+          opacity: 0;
+          transition: 0.3s ease;
+        }
+        &:hover {
+          color: $main;
+        }
+        &.active {
+          color: $main;
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &Content {
+    &__head {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(46, 87, 153, 0.2);
+    }
+    .tr {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(46, 87, 153, 0.2);
+      &:last-child {
+        border: unset;
+        .td {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .td,
+    .th {
+      width: 20%;
+      text-align: center;
+      font-family: $mainFont;
+      padding: 16px 8px;
+      &:first-child {
+        padding-left: 0;
+        text-align: start;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    .th {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      color: $primary;
+      padding-top: 0;
+    }
+    .td {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%;
+      color: $black3;
+      padding: 16px 8px;
+      text-align: center;
+      h6 {
+        display: none;
+      }
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+  &Col {
+    display: none;
+    &.active {
+      display: block;
+      animation: fadeIn 0.3s;
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .pricing {
+    margin: 56px 0 112px;
+  }
+}
+// 930px
+@include md-lg {
+  .pricing {
+    margin: 48px 0 96px;
+  }
+}
+// 750px
+@include sm-md {
+  .pricing {
+    &Tabs {
+      margin-bottom: 24px;
+      padding: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 24px;
+      display: block;
+      &__inner {
+        flex-wrap: wrap;
+        margin: 0 -4px;
+        button {
+          padding: 12px 5px;
+          width: calc(50% - 8px);
+          margin: 4px;
+          border-radius: 16px;
+          border: 2px solid transparent;
+          &::before {
+            display: none;
+          }
+          &.active {
+            background: linear-gradient(
+              180deg,
+              rgba(46, 87, 153, 0) 0%,
+              rgba(46, 87, 153, 0.1) 100%
+            );
+            border-color: $primary;
+          }
+        }
+      }
+    }
+    &Content {
+      &__head {
+        display: none;
+      }
+      .tr {
+        flex-direction: column;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        &:last-child {
+          margin: 0;
+          padding: 0;
+          border: unset;
+        }
+      }
+      .td {
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        font-family: $titleFont;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 125%;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
+        &:first-child {
+          justify-content: center;
+          text-align: center;
+          margin-bottom: 24px;
+          text-transform: uppercase;
+        }
+        &:last-child {
+          margin: 0;
+        }
+        h6 {
+          display: block;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 150%;
+          color: $primary;
+        }
+        p {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}

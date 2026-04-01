@@ -1,0 +1,95 @@
+@use "../../mixin/mixin.scss" as *;
+@use "../../1-main/variables.scss" as *;
+.envir {
+  &__inner {
+    padding: 64px 0;
+    &-main {
+      display: flex;
+      border-radius: 48px;
+      overflow: hidden;
+      margin-bottom: 64px;
+      background: $main;
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &Image {
+    flex: 1;
+    display: flex;
+    border-radius: 48px;
+    overflow: hidden;
+    &__inner {
+      width: 100%;
+      padding-bottom: 58%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+  &Content {
+    width: 467px;
+    padding: 48px;
+    h2 {
+      margin-bottom: 24px;
+      max-width: 310px;
+      color: $white;
+    }
+    p {
+      margin-bottom: 48px;
+      color: $white3;
+    }
+  }
+  &Item {
+    width: 33.3%;
+    border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+    &:first-child {
+      .envirItem {
+        &__inner {
+          margin: 0;
+        }
+      }
+    }
+    &:last-child {
+      border: unset;
+      .envirItem {
+        &__inner {
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 335px;
+      margin: 0 auto;
+      width: 90%;
+    }
+    &__icon {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      margin-bottom: 12px;
+      img {
+        width: 100%;
+      }
+    }
+    h4 {
+      color: $black1;
+      max-width: 193px;
+      margin: 0 auto 24px;
+    }
+    .paragraph {
+      color: $black3;
+      max-width: 245px;
+      margin: 0 auto;
+    }
+  }
+}

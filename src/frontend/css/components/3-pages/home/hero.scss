@@ -1,0 +1,97 @@
+@use "../../mixin/mixin.scss" as *;
+@use "../../1-main/variables.scss" as *;
+.hero {
+  position: relative;
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    pointer-events: none;
+    border-radius: 0 0 64px 64px;
+    overflow: hidden;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: rgba($color: #000000, $alpha: 0.6);
+      z-index: 2;
+    }
+    img,
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include fullImage;
+    }
+    video {
+      z-index: 1;
+      &::-webkit-media-controls {
+        display: none;
+      }
+    }
+  }
+  &__inner {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $white;
+    padding: 240px 0 64px;
+    &-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 32px;
+      .button {
+        margin-right: 32px;
+      }
+    }
+    p {
+      color: $white4;
+    }
+    h1 {
+      color: $white;
+      margin-bottom: 32px;
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .hero {
+    &__bg {
+      border-radius: 0 0 32px 32px;
+      &::after {
+        border-radius: 0 0 32px 32px;
+        height: 60%;
+      }
+    }
+  }
+}
+// 1024px
+@include lg-xlg {
+  .hero {
+    &__inner {
+      min-height: 100vh;
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .hero {
+    &__inner {
+      padding: 100px 0 64px;
+    }
+  }
+}
