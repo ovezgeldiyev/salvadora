@@ -8,11 +8,22 @@
       align-items: flex-end;
       justify-content: space-between;
       margin-bottom: 48px;
+      &.center {
+      }
       h2 {
-        flex: 1;
+        margin-bottom: 16px;
+        &:last-child {
+          margin: 0;
+        }
       }
       .link {
         margin-left: 32px;
+      }
+    }
+    &-side {
+      flex: 1;
+      p {
+        color: #4a5565;
       }
     }
     &-row {
@@ -29,6 +40,14 @@
     align-items: center;
     text-align: center;
     color: $black3;
+    cursor: pointer;
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 1;
+      img {
+        transform: scale(1.05);
+      }
+    }
     &__image {
       width: 60%;
       max-width: 180px;
@@ -36,6 +55,7 @@
       margin-bottom: 16px;
       img {
         width: 100%;
+        transition: 0.4s ease;
       }
     }
     h4 {
@@ -47,44 +67,67 @@
 // 1180px
 @include xlg-xxlg {
   .team {
-    margin: 112px 0;
+    &__inner {
+      padding: 80px 0 56px;
+    }
   }
 }
 // 930px
 @include md-lg {
   .team {
-    margin: 96px 0;
+  }
+}
+// 750px
+@include sm-md {
+  .team {
     &__inner {
-      &-row {
+      padding: 64px 0 56px;
+      &-top {
         flex-direction: column;
+        align-items: flex-start;
+        &.center {
+          text-align: center;
+          align-items: center;
+        }
+        h2 {
+          margin-bottom: 24px;
+        }
+        .link {
+          margin: 0;
+        }
+      }
+      &-side {
+        margin-bottom: 24px;
+      }
+      &-row {
+        flex-wrap: wrap;
+        margin: -16px -5px;
       }
     }
     &Item {
-      width: 100%;
-      max-width: unset;
-      margin-bottom: 24px;
-      &:last-child {
-        margin: 0;
-      }
-      &__link {
-        max-width: unset;
-      }
+      width: calc(50% - 10px);
+      margin: 16px 5px;
     }
   }
 }
 // 540px
 @include xsm-sm {
   .team {
-    &Item {
-      &__info {
+    &__inner {
+      padding: 64px 0 48px;
+      &-top {
+        margin-bottom: 32px;
+      }
+      &-row {
+        margin: 0;
         flex-direction: column;
       }
-      &__link {
-        width: 100%;
-        margin-bottom: 24px;
-        &:last-child {
-          margin: 0;
-        }
+    }
+    &Item {
+      width: 100%;
+      margin: 0 0 24px 0;
+      &:last-child {
+        margin: 0;
       }
     }
   }

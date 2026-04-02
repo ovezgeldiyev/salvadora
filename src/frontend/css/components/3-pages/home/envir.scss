@@ -35,6 +35,10 @@
   &Content {
     width: 467px;
     padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     h2 {
       margin-bottom: 24px;
       max-width: 310px;
@@ -91,5 +95,101 @@
       max-width: 245px;
       margin: 0 auto;
     }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .envir {
+    &__inner {
+      padding: 56px 0 64px;
+      &-main {
+        border-radius: 40px;
+      }
+    }
+    &Image {
+      border-radius: 40px;
+    }
+    &Content {
+      width: 400px;
+      padding: 32px;
+      p {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+// 930px
+@include md-lg {
+  .envir {
+    &Content {
+      width: unset;
+      flex: 1;
+    }
+  }
+}
+// 750px
+@include sm-md {
+  .envir {
+    &__inner {
+      &-main {
+        flex-direction: column;
+      }
+      &-row {
+        flex-direction: column;
+      }
+    }
+    &Image {
+      width: 100%;
+      &__inner {
+        padding-bottom: 75%;
+      }
+    }
+    &Content {
+      width: 100%;
+    }
+    &Item {
+      width: 100%;
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      border: unset;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      &:last-child {
+        margin: 0;
+        padding: 0;
+      }
+      &__inner {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .envir {
+    &__inner {
+      padding: 48px 0 64px;
+      &-main {
+        border-radius: 32px;
+      }
+    }
+    &Image {
+      border-radius: 32px;
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .envir {
+  }
+}
+// 930px
+@include md-lg {
+  .envir {
+  }
+}
+// 750px
+@include sm-md {
+  .envir {
   }
 }

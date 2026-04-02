@@ -1,0 +1,149 @@
+@use "../mixin/mixin.scss" as *;
+@use "../1-main/variables.scss" as *;
+.category {
+  &__inner {
+    padding: 64px 0;
+    &-title {
+      text-align: center;
+      margin-bottom: 36px;
+      h2 {
+        margin-bottom: 24px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      p {
+        color: $black3;
+      }
+    }
+    &-wrapper {
+      max-width: 994px;
+      margin: 0 auto;
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -12px;
+    }
+  }
+  &Item {
+    width: calc(33.3% - 24px);
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px 32px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.03);
+    border-radius: 24px;
+    color: $black3;
+    cursor: pointer;
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 1;
+      box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.08);
+      border-radius: 24px;
+      border-color: $main;
+      .categoryItem {
+        &__icon {
+          img {
+            filter: brightness(0.8);
+          }
+        }
+      }
+    }
+    &__icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      margin-bottom: 48px;
+      img {
+        width: 100%;
+        transition: 0.3s ease;
+      }
+    }
+    h3 {
+      margin-bottom: 48px;
+      width: 100%;
+      color: $black1;
+      line-height: 29px;
+      height: 58px;
+      @include ellipsis(2);
+    }
+    .paragraph {
+      width: 100%;
+      margin: auto 0 0 0;
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .category {
+    &__inner {
+      padding: 56px 0;
+    }
+  }
+}
+// 1024px
+@include lg-xlg {
+  .category {
+  }
+}
+// 930px
+@include md-lg {
+  .category {
+    &Item {
+      width: calc(50% - 24px);
+    }
+  }
+}
+// 750px
+@include sm-md {
+  .category {
+    &__inner {
+      &-row {
+        margin: 0 -8px;
+      }
+    }
+    &Item {
+      padding: 40px 24px;
+      width: calc(50% - 16px);
+      margin: 8px;
+      &__icon {
+        margin-bottom: 32px;
+      }
+      h3 {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .category {
+    &__inner {
+      padding: 48px 0;
+      &-title {
+        margin-bottom: 48px;
+      }
+      &-row {
+        flex-direction: column;
+        margin: 0;
+      }
+    }
+    &Item {
+      width: 100%;
+      margin: 0 0 24px 0;
+      padding: 32px;
+      &:last-child {
+        margin: 0;
+      }
+      h3 {
+        height: unset;
+        overflow: visible;
+      }
+    }
+  }
+}

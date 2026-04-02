@@ -10,29 +10,6 @@ menuBtn.onclick = () => {
   header.classList.toggle("active");
   body.classList.toggle("active");
 };
-const searchMenu = document.getElementById("searchMenu");
-if (searchMenu) {
-  const searchBtns = document.querySelectorAll(".searchBtn");
-  searchBtns.forEach((searchBtn) => {
-    const searchClose = document.getElementById("searchClose");
-    if (searchBtn) {
-      searchBtn.onclick = () => {
-        searchBtn.classList.toggle("active");
-        searchMenu.classList.toggle("active");
-        menu.classList.remove("active");
-        menuBtn.classList.remove("active");
-        header.classList.add("active");
-        body.classList.add("active");
-      };
-      searchClose.onclick = () => {
-        searchBtn.classList.remove("active");
-        searchMenu.classList.remove("active");
-        body.classList.remove("active");
-        header.classList.remove("active");
-      };
-    }
-  });
-}
 
 window.onclick = function (event) {
   if (event.target === menu) {
@@ -113,63 +90,63 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function mobileLinkHandler(e) {
-    const parentLi = this.parentElement;
-    const submenu = parentLi.querySelector(":scope > ul");
-    const chevron = this.querySelector("svg");
+  // function mobileLinkHandler(e) {
+  //   const parentLi = this.parentElement;
+  //   const submenu = parentLi.querySelector(":scope > ul");
+  //   const chevron = this.querySelector("svg");
 
-    if (submenu) {
-      e.preventDefault();
+  //   if (submenu) {
+  //     e.preventDefault();
 
-      if (submenu.classList.contains("active")) {
-        submenu.classList.remove("active");
-        parentLi.classList.remove("active");
-      } else {
-        const siblingSubmenus = parentLi.parentElement.querySelectorAll(
-          ":scope > li > ul.active",
-        );
-        const siblingActiveItems =
-          parentLi.parentElement.querySelectorAll(":scope > li.active");
+  //     if (submenu.classList.contains("active")) {
+  //       submenu.classList.remove("active");
+  //       parentLi.classList.remove("active");
+  //     } else {
+  //       const siblingSubmenus = parentLi.parentElement.querySelectorAll(
+  //         ":scope > li > ul.active",
+  //       );
+  //       const siblingActiveItems =
+  //         parentLi.parentElement.querySelectorAll(":scope > li.active");
 
-        siblingSubmenus.forEach((sibling) => {
-          if (sibling !== submenu) {
-            sibling.classList.remove("active");
-          }
-        });
+  //       siblingSubmenus.forEach((sibling) => {
+  //         if (sibling !== submenu) {
+  //           sibling.classList.remove("active");
+  //         }
+  //       });
 
-        siblingActiveItems.forEach((item) => {
-          if (item !== parentLi) {
-            item.classList.remove("active");
-          }
-        });
+  //       siblingActiveItems.forEach((item) => {
+  //         if (item !== parentLi) {
+  //           item.classList.remove("active");
+  //         }
+  //       });
 
-        submenu.classList.add("active");
-        parentLi.classList.add("active");
-      }
-    }
-  }
+  //       submenu.classList.add("active");
+  //       parentLi.classList.add("active");
+  //     }
+  //   }
+  // }
 
-  function handleMobileDropdowns() {
-    const parentItems = menu.querySelectorAll(".nav__inner-links li:has(> ul)");
+  // function handleMobileDropdowns() {
+  //   const parentItems = menu.querySelectorAll(".nav__inner-links li:has(> ul)");
 
-    parentItems.forEach((li) => {
-      const link = li.querySelector(":scope > a");
-      const submenu = li.querySelector(":scope > ul");
+  //   parentItems.forEach((li) => {
+  //     const link = li.querySelector(":scope > a");
+  //     const submenu = li.querySelector(":scope > ul");
 
-      li.removeEventListener("mouseenter", null);
-      li.removeEventListener("mouseleave", null);
+  //     li.removeEventListener("mouseenter", null);
+  //     li.removeEventListener("mouseleave", null);
 
-      link.addEventListener("click", mobileLinkHandler);
-    });
-  }
+  //     link.addEventListener("click", mobileLinkHandler);
+  //   });
+  // }
 
-  function initNavigation() {
-    if (mqMobile.matches) {
-      handleMobileDropdowns();
-    } else {
-      handleDesktopDropdowns();
-    }
-  }
+  // function initNavigation() {
+  //   if (mqMobile.matches) {
+  //     handleMobileDropdowns();
+  //   } else {
+  //     handleDesktopDropdowns();
+  //   }
+  // }
 
   document.addEventListener("click", (e) => {
     if (
@@ -191,8 +168,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  initNavigation();
-  window.addEventListener("resize", initNavigation);
+  // initNavigation();
+  // window.addEventListener("resize", initNavigation);
 });
 // nav end
 
@@ -328,3 +305,62 @@ function onFaqClick(faqBtns, faqItems, item) {
   });
 }
 // faq end
+
+document.querySelectorAll('.select').forEach(select => {
+  const selected = select.querySelector('.select__selected');
+  const selectedText = selected.querySelector('p');
+  const options = select.querySelectorAll('.select__options li');
+
+  // Toggle dropdown
+  selected.addEventListener('click', () => {
+    select.classList.toggle('active');
+  });
+
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      const value = option.textContent;
+      const scheduleId = option.dataset.schedule;
+
+      // Set selected text
+      selectedText.textContent = value;
+
+      // Close dropdown
+      select.classList.remove('active');
+
+      // Show all options again
+      options.forEach(o => o.classList.remove('hidden'));
+
+      // Hide selected option
+      option.classList.add('hidden');
+
+      // Handle schedules (tabs)
+      if (scheduleId) {
+        document.querySelectorAll('.joinItem__schedule').forEach(s => {
+          s.classList.remove('active');
+        });
+
+        const activeSchedule = document.querySelector(scheduleId);
+        if (activeSchedule) {
+          activeSchedule.classList.add('active');
+        }
+      }
+    });
+  });
+
+  // Hide initially selected item
+  const initialValue = selectedText.textContent.trim();
+  options.forEach(option => {
+    if (option.textContent.trim() === initialValue) {
+      option.classList.add('hidden');
+    }
+  });
+});
+
+// Close on outside click
+document.addEventListener('click', e => {
+  document.querySelectorAll('.select').forEach(select => {
+    if (!select.contains(e.target)) {
+      select.classList.remove('active');
+    }
+  });
+});

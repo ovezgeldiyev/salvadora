@@ -21,7 +21,7 @@
       }
     }
     &-main {
-      width: calc(40% - 15px);
+      width: calc(38% - 15px);
       max-width: 438px;
       p {
         color: #1a1a1a;
@@ -30,7 +30,7 @@
     &-links {
       display: flex;
       justify-content: space-between;
-      width: calc(60% - 15px);
+      width: calc(62% - 15px);
       max-width: 700px;
     }
     &-col {
@@ -124,15 +124,24 @@
       font-weight: 600;
       font-size: 16px;
       line-height: 145%;
+      word-break: break-all;
     }
   }
 }
 // 1180px
 @include xlg-xxlg {
   .footer {
+    border-radius: 48px 48px 0 0;
     &__inner {
-      &-row {
-        padding: 56px 0;
+      padding: 56px 0;
+      &-main {
+        width: calc(33% - 12px);
+      }
+      &-links {
+        width: calc(67% - 12px);
+      }
+      &-copy {
+        margin-top: 0;
       }
     }
   }
@@ -142,12 +151,14 @@
   .footer {
     &__inner {
       &-row {
-        padding: 48px 0;
         flex-direction: column;
         align-items: flex-start;
+        margin-bottom: 32px;
       }
-      &-logo {
-        margin-bottom: 48px;
+      &-main {
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 32px;
       }
       &-links {
         width: 100%;
@@ -160,25 +171,42 @@
 @include sm-md {
   .footer {
     &__inner {
-      padding: 0 8px;
       &-links {
         flex-direction: column;
       }
       &-col {
         width: 100%;
-        margin-bottom: 48px;
+        max-width: unset;
+        margin-bottom: 32px;
         &:last-child {
           margin: 0;
         }
       }
       &-copy {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        p {
-          margin-bottom: 12px;
-        }
-        a {
-          margin-right: 16px;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .footer {
+    border-radius: 32px 32px 0 0;
+    &__inner {
+      padding: 48px 0;
+      &-logo {
+        width: 127px;
+        margin-bottom: 16px;
+      }
+      &-main {
+        .paragraph {
+          p {
+            font-size: 14px;
+            padding: 0 6px;
+          }
         }
       }
     }

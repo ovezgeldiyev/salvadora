@@ -26,6 +26,9 @@ function onTabClick2(modallBtns, modallItems, item) {
       });
       currentTab.classList.add("active");
       document.body.classList.add("active");
+      menu.classList.remove("active");
+      menuBtn.classList.remove("active");
+      header.classList.remove("active");
     }
   });
 

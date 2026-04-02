@@ -196,22 +196,23 @@
       width: 100%;
       max-width: 390px;
       z-index: 1;
-      padding: 40px 24px 20px;
+      padding: 68px 24px 24px;
       height: 100%;
       overflow-y: auto;
-      background: $primary;
+      background: #01401e;
+
       &::-webkit-scrollbar {
         display: none;
       }
       &-links {
         flex-direction: column;
         align-items: flex-start;
-        margin: 0 0 48px 0;
+        margin: 0 0 32px 0;
         width: 100%;
         padding: 0;
         border: unset !important;
         & > li {
-          margin: 0 0 24px 0;
+          margin: 0 0 32px 0;
           width: 100%;
           display: flex;
           flex-direction: column;
@@ -220,11 +221,11 @@
             margin: 0;
           }
           & > a {
-            color: $white !important;
+            color: $white3 !important;
             padding: 0;
             font-weight: 500;
-            font-size: 16px;
-            line-height: 150%;
+            font-size: 18px;
+            line-height: 145%;
             position: relative;
             display: flex;
             align-items: center;
@@ -236,16 +237,19 @@
           }
         }
         a {
-          color: $white !important;
+          color: $white3 !important;
           &:hover {
             color: $white !important;
+          }
+          svg {
+            display: none;
           }
         }
         li {
           position: static;
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center;
           &:hover {
             & > a {
               color: $white !important;
@@ -265,14 +269,14 @@
             position: static;
             width: 100%;
             box-shadow: unset;
-            padding: 0 0 0 20px;
-            border-left: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+            padding: 0;
             border-radius: unset;
-            display: none;
+            border: unset;
+            opacity: 1;
+            visibility: visible;
             overflow: hidden;
-            overflow-y: auto;
             background: transparent;
-            margin-top: 24px;
+            margin-top: 32px;
             &::-webkit-scrollbar {
               display: none;
             }
@@ -281,15 +285,15 @@
               display: block;
             }
             li {
-              margin-bottom: 16px;
+              margin-bottom: 32px;
               &:last-child {
                 margin: 0;
               }
               a {
                 padding: 0;
                 font-weight: 500;
-                font-size: 16px;
-                line-height: 150%;
+                font-size: 18px;
+                line-height: 145%;
                 color: $white;
                 background: transparent !important;
                 border-radius: unset;
@@ -301,71 +305,23 @@
           }
         }
       }
-      &-back {
-        display: flex;
-        align-items: center;
-        font-family: $mainFont;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 150%;
-        color: $primary;
-        cursor: pointer;
-        transition: 0.3s ease;
-        margin: 0 0 30px 0;
-        width: 100%;
-        padding: 0 20px;
-        background: transparent;
-        &:hover {
-          span {
-            background: $primary;
-            border-color: $primary;
-            color: $white;
-          }
-        }
-        span {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 30px;
-          height: 30px;
-          border: 1px solid #dddddd;
-          margin-right: 10px;
-          transition: 0.3s ease;
-          svg {
-            transform: scaleX(-1);
-            width: 10px;
-            height: 14px;
-            transition: 0.3s ease;
-          }
-        }
-      }
       &-buttons {
-        justify-content: space-between;
+        margin: auto 0 0 0;
+        flex-direction: column;
         width: 100%;
-        margin-bottom: 48px;
         .button {
-          width: calc(50% - 6px);
+          width: 100%;
           font-weight: 600;
-          font-size: 16px;
-          line-height: 150%;
-          padding: 12px 24px;
-          margin: 0;
-          &.solid {
-            color: $white !important;
-            border-color: $white !important;
-            &:hover {
-              background: $white !important;
-              color: $main !important;
-            }
-          }
-          &.primary {
-            background: $white;
-            color: $main;
-            &:hover {
-              background: $main !important;
-              color: $white !important;
-              border-color: $main;
-            }
+          font-size: 18px;
+          line-height: 145%;
+          padding: 16px 32px;
+          margin: 0 0 24px 0;
+          order: -1;
+          background: $white;
+          color: $black1;
+          &:hover {
+            background: $white3;
+            color: $black1;
           }
         }
       }

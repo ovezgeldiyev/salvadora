@@ -70,6 +70,7 @@
         <div class="header__inner">
           <a href="index.html" class="header__inner-logo">
             <img src="./images/logo.svg" alt="logo" />
+            <img class="light" src="./images/logo-white.svg" alt="logo" />
           </a>
           <nav class="nav" id="menu">
             <div class="nav__inner">
@@ -86,7 +87,7 @@
                       <a href="#">Dentální hygiena</a>
                     </li>
                     <li>
-                      <a href="#">Stomatologická péče</a>
+                      <a href="service-detail.html">Stomatologická péče</a>
                     </li>
                     <li>
                       <a href="#">Implantologie</a>
@@ -97,10 +98,10 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="service.html"> Pro pacienty </a>
+                  <a href="for-clients.html"> Pro pacienty </a>
                 </li>
                 <li>
-                  <a href="#"> O klinice </a>
+                  <a href="about.html"> O klinice </a>
                 </li>
                 <li>
                   <a href="pricing.html"> Ceník </a>
@@ -125,7 +126,13 @@
                     <button type="button" data-lang="CS">CS</button>
                   </div>
                 </div>
-                <a href="#" class="button primary sm"> Objednat termín </a>
+                <button
+                  type="button"
+                  data-tab="#modal-1"
+                  class="button secondary sm modallBtn"
+                >
+                  Objednat termín
+                </button>
               </div>
             </div>
           </nav>
@@ -169,8 +176,14 @@
                 data-wow-duration=".5s"
                 data-wow-delay=".4s"
               >
-                <a href="#" class="button secondary"> Objednat termín </a>
-                <a href="#" class="link light">
+                <button
+                  type="button"
+                  data-tab="#modal-1"
+                  class="button secondary modallBtn"
+                >
+                  Objednat termín
+                </button>
+                <a href="service.html" class="link light">
                   Prohlédnout služby
                   <span>
                     <svg>
@@ -203,7 +216,7 @@
                 <p>Komplexní stomatologická péče na jednom místě</p>
               </div>
               <div class="services__inner-row">
-                <div class="servicesItem">
+                <a href="service-detail.html" class="servicesItem">
                   <h3>Dentální hygiena</h3>
                   <div class="servicesItem__icon">
                     <img src="./images/services/1.svg" alt="icon" />
@@ -213,8 +226,8 @@
                       Profesionální čištění a prevence pro zdravé zuby a dásně.
                     </p>
                   </div>
-                </div>
-                <div class="servicesItem">
+                </a>
+                <a href="service-detail.html" class="servicesItem">
                   <h3>Stomatologická péče</h3>
                   <div class="servicesItem__icon">
                     <img src="./images/services/2.svg" alt="icon" />
@@ -224,8 +237,8 @@
                       Komplexní ošetření zubů od prevence po náročné zákroky.
                     </p>
                   </div>
-                </div>
-                <div class="servicesItem">
+                </a>
+                <a href="service-detail.html" class="servicesItem">
                   <h3>Implantologie</h3>
                   <div class="servicesItem__icon">
                     <img src="./images/services/3.svg" alt="icon" />
@@ -236,8 +249,8 @@
                       zubů.
                     </p>
                   </div>
-                </div>
-                <div class="servicesItem">
+                </a>
+                <a href="service-detail.html" class="servicesItem">
                   <h3>Ortodoncie</h3>
                   <div class="servicesItem__icon">
                     <img src="./images/services/4.svg" alt="icon" />
@@ -245,7 +258,7 @@
                   <div class="paragraph xsm">
                     <p>Rovnání zubů a korekce skusu pro dokonalý úsměv.</p>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -259,9 +272,11 @@
         <div class="bg-white rounded-top">
           <div class="auto__container">
             <div class="team__inner">
-              <div class="team__inner-top">
-                <h2>Odborný tým specialistů</h2>
-                <a href="#" class="link">
+              <div class="team__inner-top center">
+                <div class="team__inner-side">
+                  <h2>Odborný tým specialistů</h2>
+                </div>
+                <a href="about.html" class="link">
                   Poznat celý tým
                   <span>
                     <svg>
@@ -271,7 +286,7 @@
                 </a>
               </div>
               <div class="team__inner-row">
-                <div class="teamItem">
+                <a href="doctor-detail.html" class="teamItem">
                   <div class="teamItem__image">
                     <img src="./images/team/1.webp" alt="MDDr. Petra Kecová" />
                   </div>
@@ -279,8 +294,8 @@
                   <div class="paragraph sm">
                     <p>vedoucí zubní lékařka</p>
                   </div>
-                </div>
-                <div class="teamItem">
+                </a>
+                <a href="doctor-detail.html" class="teamItem">
                   <div class="teamItem__image">
                     <img src="./images/team/2.webp" alt="MUDr. Adéla Ottová" />
                   </div>
@@ -288,8 +303,8 @@
                   <div class="paragraph sm">
                     <p>zubní lékařka</p>
                   </div>
-                </div>
-                <div class="teamItem">
+                </a>
+                <a href="doctor-detail.html" class="teamItem">
                   <div class="teamItem__image">
                     <img
                       src="./images/team/3.webp"
@@ -300,7 +315,7 @@
                   <div class="paragraph sm">
                     <p>stomatochirurg</p>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -462,21 +477,19 @@
                     </div>
                     <div class="joinItem__content">
                       <div class="select">
-                        <select name="" id="">
-                          <option value="Stomatologie" selected>
-                            Stomatologie
-                          </option>
-                          <option value="Stomatologická péče">
-                            Stomatologická péče
-                          </option>
-                          <option value="Implantologie">Implantologie</option>
-                          <option value="Ortodoncie">Ortodoncie</option>
-                        </select>
-                        <svg>
-                          <use xlink:href="#chevronBottom"></use>
-                        </svg>
+                        <div class="select__selected">
+                          <p>Stomatologie</p>
+                          <svg>
+                            <use xlink:href="#chevronBottom"></use>
+                          </svg>
+                        </div>
+                        <ul class="select__options">
+                          <li data-schedule="#schedule-1">Stomatologie</li>
+                          <li data-schedule="#schedule-2">Implantologie</li>
+                          <li data-schedule="#schedule-3">Ortodoncie</li>
+                        </ul>
                       </div>
-                      <div class="joinItem__schedule">
+                      <div class="joinItem__schedule active" id="schedule-1">
                         <span>
                           <svg>
                             <use xlink:href="#clockIcon"></use>
@@ -505,11 +518,75 @@
                           </li>
                         </ul>
                       </div>
+                      <div class="joinItem__schedule" id="schedule-2">
+                        <span>
+                          <svg>
+                            <use xlink:href="#clockIcon"></use>
+                          </svg>
+                        </span>
+                        <ul>
+                          <li>
+                            <p>Pondělí</p>
+                            <p>7:00 - 17:00</p>
+                          </li>
+                          <li>
+                            <p>Úterý</p>
+                            <p>8:00 - 17:00</p>
+                          </li>
+                          <li>
+                            <p>Středa</p>
+                            <p>10:00 - 19:00</p>
+                          </li>
+                          <li>
+                            <p>Čtvrtek</p>
+                            <p>8:00 - 17:00</p>
+                          </li>
+                          <li>
+                            <p>Pátek</p>
+                            <p>7:00 - 15:00</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="joinItem__schedule" id="schedule-3">
+                        <span>
+                          <svg>
+                            <use xlink:href="#clockIcon"></use>
+                          </svg>
+                        </span>
+                        <ul>
+                          <li>
+                            <p>Pondělí</p>
+                            <p>9:00 - 17:00</p>
+                          </li>
+                          <li>
+                            <p>Úterý</p>
+                            <p>8:00 - 17:00</p>
+                          </li>
+                          <li>
+                            <p>Středa</p>
+                            <p>10:00 - 19:00</p>
+                          </li>
+                          <li>
+                            <p>Čtvrtek</p>
+                            <p>8:00 - 17:00</p>
+                          </li>
+                          <li>
+                            <p>Pátek</p>
+                            <p>7:00 - 15:00</p>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="joinContact__foot">
-                  <a href="#" class="button secondary"> Objednat termín </a>
+                  <button
+                    type="button"
+                    data-tab="#modal-1"
+                    class="button secondary modallBtn"
+                  >
+                    Objednat termín
+                  </button>
                 </div>
               </div>
               <div class="joinRef">
@@ -556,7 +633,6 @@
                               </p>
                             </div>
                           </div>
-
                           <div class="joinSlide__profile">
                             <div class="joinSlide__avatar">
                               <p>S</p>
@@ -685,27 +761,27 @@
         <div class="footer__inner">
           <div class="footer__inner-row">
             <div class="footer__inner-main">
-              <div class="footer__inner-logo">
+              <a href="index.html" class="footer__inner-logo">
                 <img src="./images/logo.svg" alt="logo" />
-              </div>
-              <div class="paragraph">
-                <p class="sm">Moderní stomatologická péče v Praze 6</p>
+              </a>
+              <div class="paragraph sm">
+                <p>Moderní stomatologická péče v Praze 6</p>
               </div>
             </div>
             <div class="footer__inner-links">
               <div class="footer__inner-col">
                 <h4>Služby</h4>
                 <a href="#"> Dentální hygiena </a>
-                <a href="#"> Stomatologická péče </a>
+                <a href="service-detail.html"> Stomatologická péče </a>
                 <a href="#"> Implantologie </a>
                 <a href="#"> Ortodoncie </a>
               </div>
               <div class="footer__inner-col">
                 <h4>Informace</h4>
-                <a href="#"> Pro pacienty </a>
-                <a href="#"> O klinice </a>
-                <a href="#"> Ceník </a>
-                <a href="#"> Kontakt </a>
+                <a href="for-clients.html"> Pro pacienty </a>
+                <a href="about.html"> O klinice </a>
+                <a href="pricing.html"> Ceník </a>
+                <a href="contact.html"> Kontakt </a>
               </div>
               <div class="footer__inner-col">
                 <h4>Kontakt</h4>
@@ -769,8 +845,8 @@
     =========================================== -->
     <!-- modals start-->
     <div class="modall" id="modal-1">
-      <div class="modall__inner">
-        <form action="#" class="modallMain">
+      <form action="#" class="modall__inner">
+        <div class="modallMain">
           <div class="modall__inner-head">
             <div class="modall__inner-title">
               <h3>Kontaktujte nás</h3>
@@ -824,16 +900,15 @@
               </p>
             </label>
           </div>
-        </form>
+        </div>
         <div class="modall__inner-foot">
           <button type="submit" class="button primary sm">
             Odeslat zprávu
           </button>
         </div>
-      </div>
+      </form>
     </div>
     <!-- modals end-->
-
     <!-- Sprites
     =========================================== -->
     <svg style="display: none">

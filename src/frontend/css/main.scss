@@ -14,28 +14,33 @@
 @use "./components/2-layout/intro.scss" as *;
 @use "./components/2-layout/news.scss" as *;
 @use "./components/2-layout/reference.scss" as *;
-@use "./components/2-layout/discover.scss" as *;
 @use "./components/2-layout/partners.scss" as *;
 @use "./components/2-layout/footer.scss" as *;
 @use "./components/2-layout/swiper.scss" as *;
 
 @use "./components/2-layout/team.scss" as *;
 @use "./components/2-layout/join.scss" as *;
+@use "./components/2-layout/category.scss" as *;
+@use "./components/2-layout/faq.scss" as *;
 
 // 3-pages components
 // home page
 @use "./components/3-pages/home/hero.scss" as *;
 @use "./components/3-pages/home/envir.scss" as *;
 @use "./components/3-pages/home/services.scss" as *;
-@use "./components/3-pages/home/info.scss" as *;
 // service page
-@use "./components/3-pages/service/occupancy.scss" as *;
-@use "./components/3-pages/service/gallery.scss" as *;
+@use "./components/3-pages/service/why.scss" as *;
+// service detail page
+@use "./components/3-pages/service-detail/detail.scss" as *;
+@use "./components/3-pages/service-detail/solve.scss" as *;
+@use "./components/3-pages/service-detail/care.scss" as *;
+
 // pricing page
 @use "./components/3-pages/pricing/pricing.scss" as *;
-@use "./components/3-pages/pricing/faq.scss" as *;
 // about page
+@use "./components/3-pages/about/premises.scss" as *;
 @use "./components/3-pages/about/about.scss" as *;
+
 // visit page
 @use "./components/3-pages/visit/visit.scss" as *;
 // contact page

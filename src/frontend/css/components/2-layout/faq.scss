@@ -1,0 +1,149 @@
+@use "../mixin/mixin.scss" as *;
+@use "../1-main/variables.scss" as *;
+.faq {
+  &__inner {
+    padding: 64px 0 96px;
+    &-title {
+      text-align: center;
+      margin-bottom: 64px;
+      h2 {
+        margin-bottom: 24px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    &-row {
+      max-width: 994px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-col {
+      width: calc(50% - 6px);
+      max-width: 490px;
+    }
+  }
+  &Item {
+    width: 100%;
+    margin-bottom: 12px;
+    background: $white;
+    transition: 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    &:hover {
+      border-color: $primary;
+    }
+    &:last-child {
+      margin: 0;
+    }
+    &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 16px 16px 24px;
+      cursor: pointer;
+      &.active {
+        span {
+          svg {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+      span {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 24px;
+        position: relative;
+        color: #767676;
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 50%;
+        transition: 0.3s ease;
+        svg {
+          width: 16px;
+          height: 16px;
+          transition: 0.3s ease;
+        }
+      }
+      h6 {
+        flex: 1;
+        font-family: $mainFont;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 145%;
+        color: $black2;
+      }
+    }
+    &__body {
+      padding: 0 16px 0 24px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: 0.4s ease;
+      &.active {
+        opacity: 1;
+        max-height: 600px;
+        padding: 0 16px 16px 24px;
+      }
+      p {
+        color: #767676;
+        font-weight: 500;
+      }
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .faq {
+    &__inner {
+      padding: 56px 0 80px;
+      &-title {
+        margin-bottom: 56px;
+      }
+    }
+  }
+}
+// 930px
+@include md-lg {
+  .faq {
+  }
+}
+// 750px
+@include sm-md {
+  .faq {
+    &__inner {
+      &-row {
+        flex-direction: column;
+      }
+      &-col {
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 12px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .faq {
+    &__inner {
+      padding: 48px 0 64px;
+      &-title {
+        margin-bottom: 48px;
+      }
+    }
+    &Item {
+      &__head {
+        span {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}

@@ -71,11 +71,10 @@
 @include xlg-xxlg {
   .hero {
     &__bg {
-      border-radius: 0 0 32px 32px;
-      &::after {
-        border-radius: 0 0 32px 32px;
-        height: 60%;
-      }
+      border-radius: 0 0 48px 48px;
+    }
+    &__inner {
+      padding: 200px 0 56px;
     }
   }
 }
@@ -83,15 +82,32 @@
 @include lg-xlg {
   .hero {
     &__inner {
-      min-height: 100vh;
+    }
+  }
+}
+// 930px
+@include md-lg {
+  .hero {
+    &__inner {
+      padding: 180px 0 48px;
     }
   }
 }
 // 540px
 @include xsm-sm {
   .hero {
+    &__bg {
+      border-radius: 0 0 32px 32px;
+    }
     &__inner {
-      padding: 100px 0 64px;
+      padding: 168px 0 48px;
+      &-buttons {
+        flex-direction: column;
+        align-items: center;
+        .button {
+          margin: 0 0 24px 0;
+        }
+      }
     }
   }
 }

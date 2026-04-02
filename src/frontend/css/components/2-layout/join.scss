@@ -8,7 +8,7 @@
     justify-content: space-between;
   }
   &Contact {
-    width: calc(45% - 20px);
+    width: calc(45% - 15px);
     max-width: 480px;
     &__title {
       margin-bottom: 48px;
@@ -31,6 +31,10 @@
     border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.15);
     &:first-child {
       padding-top: 0;
+    }
+    &:last-child {
+      border: unset;
+      padding-bottom: 0;
     }
     &__title {
       width: 173px;
@@ -63,8 +67,12 @@
       }
     }
     &__schedule {
-      display: flex;
+      display: none;
       align-items: flex-start;
+      &.active {
+        display: flex;
+        animation: fadeIn 0.3s;
+      }
       ul {
         flex: 1;
         li {
@@ -88,7 +96,7 @@
     }
   }
   &Ref {
-    width: calc(55% - 20px);
+    width: calc(55% - 15px);
     max-width: 600px;
     &__title {
       text-align: center;
@@ -109,7 +117,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 110%;
+        width: calc(100% + 48px);
         height: 75%;
         content: "";
         opacity: 0.3;
@@ -251,6 +259,97 @@
       &-prev {
         svg {
           transform: scaleX(-1);
+        }
+      }
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .join {
+    &__inner {
+      padding: 56px 0;
+    }
+    &Contact {
+      width: calc(45% - 10px);
+      &__title {
+        margin-bottom: 32px;
+      }
+      &__col {
+        margin-bottom: 32px;
+      }
+    }
+    &Ref {
+      width: calc(55% - 10px);
+      &__wrapper {
+        padding: 0 32px;
+      }
+      &__slider {
+        &::before {
+          width: calc(100% + 32px);
+        }
+      }
+    }
+    &Item {
+      &__title {
+        width: 160px;
+      }
+    }
+  }
+}
+// 930px
+@include md-lg {
+  .join {
+    &Item {
+      flex-direction: column;
+      &__title {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+    }
+    &Ref {
+      &__wrapper {
+        padding: 0 20px;
+      }
+    }
+    &Slide {
+      padding: 24px;
+    }
+  }
+}
+// 750px
+@include sm-md {
+  .join {
+    &__inner {
+      flex-direction: column;
+    }
+    &Contact {
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 64px;
+    }
+    &Ref {
+      width: 100%;
+      max-width: unset;
+      &__title {
+        text-align: start;
+      }
+    }
+    &Slide {
+      padding: 32px;
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .join {
+    &Ref {
+      &__wrapper {
+        padding: 0;
+      }
+      &__slider {
+        &::before {
+          width: calc(100% + 24px);
         }
       }
     }
