@@ -36,7 +36,6 @@
     &:hover {
       opacity: 1;
       box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.08);
-      border-radius: 24px;
       border-color: $main;
       .servicesItem {
         &__icon {
@@ -79,11 +78,6 @@
       padding: 40px 32px;
       width: calc(50% - 24px);
     }
-  }
-}
-// 930px
-@include md-lg {
-  .services {
   }
 }
 // 750px

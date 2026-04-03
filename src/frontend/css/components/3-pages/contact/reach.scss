@@ -1,0 +1,107 @@
+@use "../../mixin/mixin.scss" as *;
+@use "../../1-main/variables.scss" as *;
+.reach {
+  &__inner {
+    padding: 64px 0;
+    &-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &Item {
+    width: 33.3%;
+    border-right: 1px solid rgba($color: #ffffff, $alpha: 0.15);
+    &:first-child {
+      padding-left: 16px;
+      .reachItem {
+        &__inner {
+          margin: 0;
+        }
+      }
+    }
+    &:last-child {
+      border: unset;
+      padding-right: 16px;
+      .reachItem {
+        &__inner {
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 335px;
+      margin: 0 auto;
+      width: 90%;
+    }
+    &__icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      margin-bottom: 12px;
+      &.sm {
+        width: 64px;
+        height: 64px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    h4 {
+      color: $white;
+      max-width: 193px;
+      margin: 0 auto 24px;
+    }
+    .paragraph {
+      color: $white3;
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .reach {
+    &__inner {
+      padding: 56px 0;
+    }
+  }
+}
+// 750px
+@include sm-md {
+  .reach {
+    &__inner {
+      &-row {
+        flex-direction: column;
+      }
+    }
+    &Item {
+      width: 100%;
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      border: unset;
+      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.15);
+      &:last-child {
+        margin: 0;
+        padding: 0;
+      }
+      &__inner {
+        max-width: unset;
+        width: 100%;
+      }
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .reach {
+    &__inner {
+      padding: 48px 0;
+    }
+  }
+}

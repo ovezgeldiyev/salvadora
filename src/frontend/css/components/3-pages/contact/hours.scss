@@ -1,0 +1,137 @@
+@use "../../mixin/mixin.scss" as *;
+@use "../../1-main/variables.scss" as *;
+.hours {
+  &__inner {
+    padding: 64px 0 96px;
+    &-title {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+    &-col {
+      display: none;
+    }
+  }
+  &Table {
+    width: 100%;
+    &__wrapper {
+      max-width: 790px;
+      margin: 0 auto;
+    }
+    tr {
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+    }
+    th,
+    td {
+      text-align: right;
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+      width: 29%;
+      &:first-child {
+        width: 100px;
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    th {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 145%;
+      padding: 0 16px 16px 16px;
+      color: $black2;
+    }
+    td {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 145%;
+      color: $black3;
+      padding: 16px;
+      b {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 145%;
+        color: $black2;
+      }
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .hours {
+    &__inner {
+      padding: 56px 0 80px;
+    }
+  }
+}
+// 750px
+@include sm-md {
+  .hours {
+    &Table {
+      th {
+        font-size: 18px;
+        padding: 0 12px 12px 12px;
+      }
+      td {
+        font-size: 16px;
+        padding: 12px;
+        b {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .hours {
+    &__inner {
+      padding: 48px 0 64px;
+      &-col {
+        display: block;
+      }
+    }
+    &Item {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+      &:last-child {
+        padding: 0;
+        margin: 0;
+        border: unset;
+      }
+      h4 {
+        margin-bottom: 24px;
+        color: $black2;
+      }
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 16px;
+          &:last-child {
+            margin: 0;
+          }
+          h6 {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 145%;
+            color: $black2;
+          }
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 145%;
+            text-align: right;
+            color: $black3;
+          }
+        }
+      }
+    }
+    &Table {
+      &__wrapper {
+        display: none;
+      }
+    }
+  }
+}

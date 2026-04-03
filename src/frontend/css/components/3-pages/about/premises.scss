@@ -82,11 +82,6 @@
     }
   }
 }
-// 1024px
-@include lg-xlg {
-  .premises {
-  }
-}
 // 930px
 @include md-lg {
   .premises {
@@ -115,11 +110,6 @@
         grid-row: span 1;
       }
     }
-  }
-}
-// 750px
-@include sm-md {
-  .premises {
   }
 }
 // 540px

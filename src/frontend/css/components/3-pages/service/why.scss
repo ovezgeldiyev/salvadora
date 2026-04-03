@@ -8,6 +8,13 @@
       }
     }
   }
+  &.mid {
+    .why {
+      &__inner {
+        padding: 64px 0;
+      }
+    }
+  }
   &__inner {
     padding: 64px 0 96px;
     &-title {
@@ -137,6 +144,13 @@
         }
       }
     }
+    &.mid {
+      .why {
+        &__inner {
+          padding: 56px 0;
+        }
+      }
+    }
     &__inner {
       padding: 56px 0 80px;
     }
@@ -190,16 +204,6 @@
     }
   }
 }
-// 930px
-@include md-lg {
-  .why {
-  }
-}
-// 750px
-@include sm-md {
-  .why {
-  }
-}
 // 540px
 @include xsm-sm {
   .why {
@@ -207,6 +211,13 @@
       .why {
         &__inner {
           padding: 64px 0 48px;
+        }
+      }
+    }
+    &.mid {
+      .why {
+        &__inner {
+          padding: 48px 0;
         }
       }
     }

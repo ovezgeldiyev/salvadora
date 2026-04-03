@@ -41,7 +41,7 @@
     margin: 8px;
     display: flex;
     align-items: center;
-    color: #767676;
+    color: $black4;
     &:hover {
       opacity: 1;
       color: $black3;
@@ -107,11 +107,6 @@
       width: 330px;
       margin-right: 32px;
     }
-  }
-}
-// 1024px
-@include lg-xlg {
-  .solve {
   }
 }
 // 930px

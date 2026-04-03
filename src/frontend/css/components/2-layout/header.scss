@@ -43,6 +43,30 @@
     top: 0;
     left: 0;
     background: $white;
+    &.dark {
+      .lang {
+        &__btn {
+          color: $black1;
+        }
+        &__menu {
+          color: $black1;
+          background: $white;
+          button {
+            color: $black1;
+          }
+        }
+      }
+      .button {
+        &.secondary {
+          background: $black1;
+          color: $white;
+          &:hover {
+            background: $primary;
+            color: $white;
+          }
+        }
+      }
+    }
     .nav {
       &__inner {
         &-links {
@@ -52,28 +76,6 @@
               color: $black3;
             }
           }
-        }
-      }
-    }
-    .button {
-      &.secondary {
-        background: $black1;
-        color: $white;
-        &:hover {
-          background: $primary;
-          color: $white;
-        }
-      }
-    }
-    .lang {
-      &__btn {
-        color: $black1;
-      }
-      &__menu {
-        color: $black1;
-        background: $white;
-        button {
-          color: $black1;
         }
       }
     }
@@ -239,6 +241,30 @@
       }
     }
     &.sticky {
+      &.dark {
+        .lang {
+          &__btn {
+            color: $white;
+          }
+          &__menu {
+            color: $white;
+            background: $main;
+            button {
+              color: $white;
+            }
+          }
+        }
+        .button {
+          &.secondary {
+            background: $white;
+            color: $black1;
+            &:hover {
+              background: $black2;
+              color: $white;
+            }
+          }
+        }
+      }
       .burger {
         &::before {
           background: $black3;

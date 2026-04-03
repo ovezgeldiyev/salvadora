@@ -1,154 +1,118 @@
 @use "../../mixin/mixin.scss" as *;
 @use "../../1-main/variables.scss" as *;
 .contact {
-  margin: 64px 0 128px;
   &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  &Banner {
-    width: calc(40% - 30px);
-    max-width: 417px;
-    border-radius: 24px;
-    overflow: hidden;
-    &__inner {
-      position: relative;
-      padding-bottom: 133.3%;
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: "";
-        background: rgba(0, 0, 0, 0.1);
-        z-index: 1;
-        pointer-events: none;
-      }
-      img,
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        @include fullImage;
-      }
-      iframe {
-        z-index: 1;
+    padding: 64px 0;
+    &-title {
+      text-align: center;
+      margin-bottom: 48px;
+      p {
+        color: $black4;
       }
     }
-  }
-  &Content {
-    width: calc(60% - 30px);
-    max-width: 687px;
-    &__title {
-      margin-bottom: 96px;
-    }
-    &__info {
+    &-row {
+      max-width: 994px;
+      margin: 0 auto 48px;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      justify-content: space-between;
     }
-    h1,
-    h2 {
+    &-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .button {
+        margin-right: 24px;
+      }
+    }
+    h1 {
       margin-bottom: 24px;
     }
   }
   &Item {
+    width: 33.3%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin-bottom: 24px;
-    color: $primary;
+    text-align: center;
+    color: $black1;
+    border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+    padding: 0 16px;
     &:hover {
       opacity: 1;
       color: $primary;
-      .contactItem {
-        &__icon {
-          border-color: $primary;
-        }
+      .paragraph {
+        color: $primary;
       }
     }
     &:last-child {
-      margin: 0;
+      border: unset;
     }
-    &__icon {
-      width: 48px;
-      height: 48px;
+    &__info {
       display: flex;
-      justify-content: center;
       align-items: center;
-      margin-right: 12px;
-      border: 1px solid $primary;
-      border-radius: 50%;
+    }
+    .paragraph {
+      margin-bottom: 8px;
+      color: $black3;
       transition: 0.3s ease;
+    }
+    span {
+      width: 19px;
+      height: 19px;
+      margin-right: 12px;
+      display: flex;
       svg {
-        width: 28px;
-        height: 28px;
+        width: 100%;
+        height: 100%;
       }
     }
-    &__content {
-      flex: 1;
-    }
-    p {
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 150%;
-    }
     h6 {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 18px;
-      line-height: 150%;
+      line-height: 145%;
     }
   }
 }
 // 1180px
 @include xlg-xxlg {
   .contact {
-    margin: 56px 0 112px;
-    &Content {
-      &__title {
-        margin-bottom: 56px;
-      }
+    &__inner {
+      padding: 56px 0;
     }
   }
 }
 // 930px
 @include md-lg {
   .contact {
-    margin: 48px 0 96px;
-    &Content {
-      width: calc(60% - 20px);
-      &__title {
-        margin-bottom: 32px;
+    &__inner {
+      &-row {
+        flex-direction: column;
       }
     }
-    &Banner {
-      width: calc(40% - 20px);
+    &Item {
+      width: 100%;
+      padding: 0 0 24px 0;
+      border: unset;
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+      margin-bottom: 24px;
+      &:last-child {
+        margin: 0;
+        padding: 0;
+      }
     }
   }
 }
-// 750px
-@include sm-md {
+// 540px
+@include xsm-sm {
   .contact {
     &__inner {
-      flex-direction: column;
-    }
-    &Content {
-      width: 100%;
-      max-width: unset;
-      order: -1;
-      margin-bottom: 48px;
-      &__title {
-        margin-bottom: 48px;
-      }
-    }
-    &Banner {
-      width: 100%;
-      max-width: unset;
-      &__inner {
-        padding-bottom: 56%;
+      padding: 48px 0;
+      &-buttons {
+        flex-direction: column;
+        align-items: center;
+        .button {
+          margin: 0 0 24px 0;
+        }
       }
     }
   }

@@ -1,0 +1,80 @@
+@use "../../mixin/mixin.scss" as *;
+@use "../../1-main/variables.scss" as *;
+.profile {
+  &__inner {
+    padding: 64px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &Image {
+    width: calc(45% - 24px);
+    max-width: 520px;
+    border-radius: 24px;
+    overflow: hidden;
+    &__inner {
+      width: 100%;
+      padding-bottom: 133%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+  }
+  &Content {
+    width: calc(55% - 24px);
+    max-width: 584px;
+    padding: 32px 0;
+    &__title {
+      margin-bottom: 32px;
+      p {
+        font-weight: 500;
+        color: $black1;
+      }
+    }
+    &__text {
+      margin-bottom: 32px;
+      p {
+        color: $black4;
+      }
+    }
+    &__buttons {
+      display: flex;
+      align-items: center;
+      .button {
+        margin-right: 24px;
+      }
+    }
+    h1 {
+      margin-bottom: 4px;
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .profile {
+  }
+}
+// 1024px
+@include lg-xlg {
+  .profile {
+  }
+}
+// 930px
+@include md-lg {
+  .profile {
+  }
+}
+// 750px
+@include sm-md {
+  .profile {
+  }
+}
+// 540px
+@include xsm-sm {
+  .profile {
+  }
+}

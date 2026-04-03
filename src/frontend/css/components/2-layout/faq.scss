@@ -58,7 +58,7 @@
         align-items: center;
         margin-left: 24px;
         position: relative;
-        color: #767676;
+        color: $black4;
         background: rgba(0, 0, 0, 0.05);
         border-radius: 50%;
         transition: 0.3s ease;
@@ -89,7 +89,7 @@
         padding: 0 16px 16px 24px;
       }
       p {
-        color: #767676;
+        color: $black4;
         font-weight: 500;
       }
     }
@@ -104,11 +104,6 @@
         margin-bottom: 56px;
       }
     }
-  }
-}
-// 930px
-@include md-lg {
-  .faq {
   }
 }
 // 750px

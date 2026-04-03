@@ -1,0 +1,37 @@
+@use "../../mixin/mixin.scss" as *;
+@use "../../1-main/variables.scss" as *;
+.info {
+  &__inner {
+    padding: 64px 0;
+    &-title {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 32px;
+    }
+    .paragraph {
+      margin-bottom: 32px;
+      color: $black4;
+      &:last-child {
+        max-width: 574px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .info {
+    &__inner {
+      padding: 56px 0;
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .info {
+    &__inner {
+      padding: 48px 0;
+    }
+  }
+}

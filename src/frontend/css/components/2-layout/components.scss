@@ -32,6 +32,10 @@ h4 {
 }
 h5 {
   font-family: $titleFont;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 105%;
+  letter-spacing: -0.04em;
 }
 h6 {
   font-family: $titleFont;
@@ -138,6 +142,11 @@ p {
     font-size: 16px;
     line-height: 145%;
     padding: 14px 28px;
+  }
+  svg {
+    width: 18px;
+    height: 18px;
+    margin-left: 4px;
   }
 }
 .link {
@@ -339,152 +348,6 @@ p {
     }
   }
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.search {
-  position: relative;
-  &Btn {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    margin: 0 32px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    color: $white;
-    background: transparent;
-    &:hover {
-      opacity: 0.8;
-    }
-    svg {
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-  }
-  &Menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: none;
-    background: $white;
-    z-index: 400;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    &.active {
-      display: block;
-      animation: fadeIn 0.3s;
-    }
-    &__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-    }
-    &__close {
-      display: flex;
-      width: 28px;
-      height: 28px;
-      margin-left: 24px;
-      cursor: pointer;
-      transition: 0.3s ease;
-      position: relative;
-      &::before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 16px;
-        height: 2px;
-        content: "";
-        transform: translate(-50%, -50%) rotate(45deg);
-        border-radius: 3px;
-        background: $black3;
-        transition: 0.3s ease;
-        pointer-events: none;
-      }
-      &::after {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 16px;
-        height: 2px;
-        content: "";
-        transform: translate(-50%, -50%) rotate(-45deg);
-        border-radius: 3px;
-        background: $black3;
-        transition: 0.3s ease;
-        pointer-events: none;
-      }
-      &:hover {
-        &::before {
-          background: $primary;
-        }
-        &::after {
-          background: $primary;
-        }
-      }
-    }
-  }
-  &Input {
-    flex: 1;
-    display: flex;
-    position: relative;
-    input {
-      width: 100%;
-      font-family: $mainFont;
-      color: $main;
-      transition: 0.3s ease;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 150%;
-      padding: 12px 24px;
-      background: $white;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 16px;
-      &:focus {
-        border-color: $primary;
-      }
-      &::placeholder {
-        color: $black3;
-      }
-    }
-    input[type="search"]::-webkit-search-decoration,
-    input[type="search"]::-webkit-search-cancel-button,
-    input[type="search"]::-webkit-search-results-button,
-    input[type="search"]::-webkit-search-results-decoration {
-      display: none;
-    }
-    button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 24px;
-      height: 24px;
-      right: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      color: $black3;
-      z-index: 2;
-      background: transparent;
-      transition: 0.3s ease;
-      &:hover {
-        color: $primary;
-      }
-      svg {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-}
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -637,15 +500,17 @@ p {
   h2 {
     font-size: 44px;
   }
-  h3 {
-  }
-  h4 {
-  }
   .paragraph {
     &.big {
+      p {
+        font-size: 18px;
+      }
     }
   }
   p {
+    &.big {
+      font-size: 18px;
+    }
   }
 
   .rounded-top {

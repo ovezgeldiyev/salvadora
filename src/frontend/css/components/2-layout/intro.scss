@@ -52,7 +52,7 @@
     }
     p {
       margin-bottom: 32px;
-      color: #767676;
+      color: $black4;
     }
   }
 }
@@ -72,11 +72,6 @@
         }
       }
     }
-  }
-}
-// 1024px
-@include lg-xlg {
-  .intro {
   }
 }
 // 930px

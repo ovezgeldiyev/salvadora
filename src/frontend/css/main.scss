@@ -13,15 +13,12 @@
 @use "./components/2-layout/nav.scss" as *;
 @use "./components/2-layout/intro.scss" as *;
 @use "./components/2-layout/news.scss" as *;
-@use "./components/2-layout/reference.scss" as *;
-@use "./components/2-layout/partners.scss" as *;
-@use "./components/2-layout/footer.scss" as *;
-@use "./components/2-layout/swiper.scss" as *;
-
 @use "./components/2-layout/team.scss" as *;
 @use "./components/2-layout/join.scss" as *;
 @use "./components/2-layout/category.scss" as *;
 @use "./components/2-layout/faq.scss" as *;
+@use "./components/2-layout/footer.scss" as *;
+@use "./components/2-layout/swiper.scss" as *;
 
 // 3-pages components
 // home page
@@ -36,15 +33,29 @@
 @use "./components/3-pages/service-detail/care.scss" as *;
 
 // pricing page
+@use "./components/3-pages/pricing/info.scss" as *;
 @use "./components/3-pages/pricing/pricing.scss" as *;
+
 // about page
 @use "./components/3-pages/about/premises.scss" as *;
 @use "./components/3-pages/about/about.scss" as *;
 
-// visit page
-@use "./components/3-pages/visit/visit.scss" as *;
+// article page
+@use "./components/3-pages/article/article.scss" as *;
+@use "./components/3-pages/article/keys.scss" as *;
+@use "./components/3-pages/article/related.scss" as *;
+
+// doctor page
+@use "./components/3-pages/doctor/profile.scss" as *;
+@use "./components/3-pages/doctor/doctor.scss" as *;
+@use "./components/3-pages/doctor/experience.scss" as *;
+@use "./components/3-pages/doctor/access.scss" as *;
+
 // contact page
 @use "./components/3-pages/contact/contact.scss" as *;
-@use "./components/3-pages/contact/form.scss" as *;
+@use "./components/3-pages/contact/address.scss" as *;
+@use "./components/3-pages/contact/hours.scss" as *;
+@use "./components/3-pages/contact/reach.scss" as *;
+
 // typography page
 @use "./components/3-pages/typography.scss" as *;

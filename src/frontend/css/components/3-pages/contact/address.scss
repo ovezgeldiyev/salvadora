@@ -1,0 +1,135 @@
+@use "../../mixin/mixin.scss" as *;
+@use "../../1-main/variables.scss" as *;
+.address {
+  &__inner {
+    padding: 64px 0;
+    &-main {
+      position: relative;
+      border-radius: 48px;
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-end;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      img {
+        @include fullImage;
+        &.mob {
+          display: none;
+        }
+      }
+    }
+    &-tools {
+      position: absolute;
+      bottom: 24px;
+      right: calc(50% + 24px);
+      display: flex;
+      width: 180px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &Content {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    padding: 48px;
+    background: $main;
+    box-shadow: 0px 3px 24px rgba(0, 0, 0, 0.03);
+    border-radius: 48px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__info {
+      margin-bottom: 32px;
+      width: 100%;
+    }
+    h2 {
+      margin-bottom: 32px;
+      color: $white;
+    }
+    h6 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 145%;
+      margin-bottom: 12px;
+    }
+    p {
+      color: $white3;
+    }
+    .link {
+      &:hover {
+        color: $white3;
+        border-color: $white3;
+      }
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .address {
+    &__inner {
+      padding: 56px 0;
+      &-main {
+        border-radius: 40px;
+      }
+    }
+    &Content {
+      border-radius: 40px;
+      padding: 32px;
+    }
+  }
+}
+// 750px
+@include sm-md {
+  .address {
+    &__inner {
+      &-bg {
+        img {
+          display: none;
+          &.mob {
+            display: block;
+          }
+        }
+      }
+      &-tools {
+        right: 24px;
+        bottom: unset;
+        top: 170px;
+      }
+      &-main {
+        padding-top: 346px;
+      }
+    }
+    &Content {
+      width: 100%;
+    }
+  }
+}
+// 540px
+@include xsm-sm {
+  .address {
+    &__inner {
+      padding: 48px 0;
+      &-main {
+        border-radius: 32px;
+      }
+    }
+    &Content {
+      border-radius: 32px;
+    }
+  }
+}

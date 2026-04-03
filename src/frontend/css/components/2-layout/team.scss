@@ -8,8 +8,6 @@
       align-items: flex-end;
       justify-content: space-between;
       margin-bottom: 48px;
-      &.center {
-      }
       h2 {
         margin-bottom: 16px;
         &:last-child {
@@ -70,11 +68,6 @@
     &__inner {
       padding: 80px 0 56px;
     }
-  }
-}
-// 930px
-@include md-lg {
-  .team {
   }
 }
 // 750px

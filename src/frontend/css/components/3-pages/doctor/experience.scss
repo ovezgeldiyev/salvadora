@@ -1,0 +1,132 @@
+@use "../../mixin/mixin.scss" as *;
+@use "../../1-main/variables.scss" as *;
+.experience {
+  &__inner {
+    padding: 64px 0;
+  }
+  &Main {
+    padding: 48px 48px 32px;
+    max-width: 790px;
+    margin: 0 auto;
+    background: #006b2e;
+    border-radius: 48px;
+    color: $white;
+    &__title {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+    &__list {
+      max-width: 636px;
+      margin: 0 auto 48px;
+    }
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 33px;
+      border-top: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+    }
+    &__col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 50%;
+      border-right: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+      &:last-child {
+        border: unset;
+      }
+      h2 {
+        margin-bottom: 8px;
+      }
+      p {
+        color: $white3;
+      }
+    }
+    h2 {
+      color: $white;
+    }
+  }
+  &Item {
+    padding-bottom: 48px;
+    position: relative;
+    &:first-child {
+      .experience {
+        &Item {
+          &__date {
+            border-radius: 16px 16px 16px 0;
+          }
+        }
+      }
+    }
+    &:last-child {
+      padding: 0;
+      &::before {
+        display: none;
+      }
+      .experience {
+        &Item {
+          &__date {
+            border-radius: 0 16px 16px 16px;
+          }
+        }
+      }
+    }
+    &::before {
+      position: absolute;
+      top: 24px;
+      left: 0;
+      width: 4px;
+      height: calc(100% - 24px);
+      content: "";
+      background: $white;
+    }
+    &__date {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 24px;
+      background: $white;
+      border-radius: 0 16px 16px 0;
+      margin-bottom: 16px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 145%;
+      color: #01401e;
+    }
+    &__content {
+      padding-left: 24px;
+    }
+    h4 {
+      margin-bottom: 8px;
+      color: $white;
+    }
+    p {
+      color: #cccccc;
+    }
+  }
+}
+// 1180px
+@include xlg-xxlg {
+  .experience {
+  }
+}
+// 1024px
+@include lg-xlg {
+  .experience {
+  }
+}
+// 930px
+@include md-lg {
+  .experience {
+  }
+}
+// 750px
+@include sm-md {
+  .experience {
+  }
+}
+// 540px
+@include xsm-sm {
+  .experience {
+  }
+}

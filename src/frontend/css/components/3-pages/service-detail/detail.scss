@@ -45,7 +45,7 @@
       text-align: center;
       margin-bottom: 32px;
       p {
-        color: #767676;
+        color: $black4;
       }
     }
     h1 {
@@ -63,21 +63,6 @@
     &__inner {
       padding: 80px 0 56px;
     }
-  }
-}
-// 1024px
-@include lg-xlg {
-  .detail {
-  }
-}
-// 930px
-@include md-lg {
-  .detail {
-  }
-}
-// 750px
-@include sm-md {
-  .detail {
   }
 }
 // 540px
