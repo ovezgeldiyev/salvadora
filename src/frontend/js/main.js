@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function setLanguage(langCode) {
     langComponents.forEach((comp) => {
       const btn = comp.querySelector(".lang__btn b");
-      btn.textContent = langCode; // 👈 always 2-letter code
+      btn.textContent = langCode; 
       comp.classList.remove("open");
     });
 
@@ -215,7 +215,6 @@ document.querySelectorAll('.select').forEach(select => {
   const selectedText = selected.querySelector('p');
   const options = select.querySelectorAll('.select__options li');
 
-  // Toggle dropdown
   selected.addEventListener('click', () => {
     select.classList.toggle('active');
   });
@@ -225,19 +224,14 @@ document.querySelectorAll('.select').forEach(select => {
       const value = option.textContent;
       const scheduleId = option.dataset.schedule;
 
-      // Set selected text
       selectedText.textContent = value;
 
-      // Close dropdown
       select.classList.remove('active');
 
-      // Show all options again
       options.forEach(o => o.classList.remove('hidden'));
 
-      // Hide selected option
       option.classList.add('hidden');
 
-      // Handle schedules (tabs)
       if (scheduleId) {
         document.querySelectorAll('.joinItem__schedule').forEach(s => {
           s.classList.remove('active');
@@ -251,7 +245,6 @@ document.querySelectorAll('.select').forEach(select => {
     });
   });
 
-  // Hide initially selected item
   const initialValue = selectedText.textContent.trim();
   options.forEach(option => {
     if (option.textContent.trim() === initialValue) {

@@ -108,25 +108,59 @@
 // 1180px
 @include xlg-xxlg {
   .experience {
-  }
-}
-// 1024px
-@include lg-xlg {
-  .experience {
-  }
-}
-// 930px
-@include md-lg {
-  .experience {
+    &__inner {
+      padding: 56px 0;
+    }
   }
 }
 // 750px
 @include sm-md {
   .experience {
+    &Main {
+      padding: 40px;
+      border-radius: 40px;
+      &__title {
+        margin-bottom: 40px;
+      }
+      &__list {
+        margin-bottom: 40px;
+      }
+    }
   }
 }
 // 540px
 @include xsm-sm {
   .experience {
+    &__inner {
+      padding: 48px 0;
+    }
+    &Main {
+      padding: 32px;
+      border-radius: 32px;
+      &__title {
+        margin-bottom: 32px;
+        text-align: start;
+      }
+      &__list {
+        margin-bottom: 32px;
+      }
+      &__row {
+        flex-direction: column;
+        padding-top: 24px;
+      }
+      &__col {
+        width: 100%;
+        align-items: flex-start;
+        text-align: start;
+        padding: 0 0 24px 0;
+        margin-bottom: 24px;
+        border: unset;
+        border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+        &:last-child {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
   }
 }

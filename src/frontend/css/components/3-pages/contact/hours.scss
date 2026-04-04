@@ -13,6 +13,7 @@
   }
   &Table {
     width: 100%;
+    border-collapse: collapse;
     &__wrapper {
       max-width: 790px;
       margin: 0 auto;
@@ -23,7 +24,6 @@
     th,
     td {
       text-align: right;
-      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
       width: 29%;
       &:first-child {
         width: 100px;

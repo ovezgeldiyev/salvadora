@@ -64,6 +64,7 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 145%;
+        margin: 0;
       }
     }
     &__schedule {
@@ -87,6 +88,7 @@
             font-weight: 600;
             font-size: 16px;
             line-height: 145%;
+            margin: 0;
           }
         }
       }
@@ -163,6 +165,9 @@
       display: flex;
       align-items: center;
       margin: auto 0 0 0;
+      h6 {
+        margin: 0;
+      }
     }
     h4 {
       color: $black2;
@@ -208,8 +213,6 @@
   }
   .swiper {
     &-slide {
-      opacity: 0;
-      visibility: hidden;
       transition: 0.4s ease;
       height: unset !important;
       &-active {

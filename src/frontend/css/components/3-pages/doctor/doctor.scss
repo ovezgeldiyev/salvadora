@@ -13,6 +13,7 @@
       margin-right: 32px;
       h2 {
         color: #181c20;
+        margin: 0;
       }
     }
     &-text {
@@ -27,25 +28,34 @@
 // 1180px
 @include xlg-xxlg {
   .doctor {
-  }
-}
-// 1024px
-@include lg-xlg {
-  .doctor {
-  }
-}
-// 930px
-@include md-lg {
-  .doctor {
+    &__inner {
+      padding: 56px 0;
+    }
   }
 }
 // 750px
 @include sm-md {
   .doctor {
+    &__inner {
+      &-row {
+        flex-direction: column;
+      }
+      &-title {
+        margin: 0 0 24px 0;
+        width: 100%;
+      }
+      &-text {
+        width: 100%;
+        max-width: unset;
+      }
+    }
   }
 }
 // 540px
 @include xsm-sm {
   .doctor {
+    &__inner {
+      padding: 48px 0;
+    }
   }
 }

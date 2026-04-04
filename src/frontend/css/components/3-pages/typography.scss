@@ -1,10 +1,8 @@
 @use "../mixin/mixin.scss" as *;
 @use "../1-main/variables.scss" as *;
 .typography {
-  margin: 80px 0 144px;
   &__inner {
-    max-width: 790px;
-    margin: 0 auto;
+    padding: 80px 0;
     &-content {
       margin-bottom: 64px;
       &:last-child {
@@ -16,8 +14,8 @@
 // 1180px
 @include xlg-xxlg {
   .typography {
-    margin: 64px 0 112px;
     &__inner {
+      padding: 64px 0;
       &-content {
         margin-bottom: 48px;
       }
@@ -27,6 +25,8 @@
 // 930px
 @include md-lg {
   .typography {
-    margin: 48px 0 96px;
+    &__inner {
+      padding: 48px 0 64px;
+    }
   }
 }

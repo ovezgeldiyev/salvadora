@@ -56,25 +56,62 @@
 // 1180px
 @include xlg-xxlg {
   .profile {
-  }
-}
-// 1024px
-@include lg-xlg {
-  .profile {
+    &__inner {
+      padding: 56px 0;
+    }
   }
 }
 // 930px
 @include md-lg {
   .profile {
+    &Image {
+      width: calc(45% - 16px);
+    }
+    &Content {
+      padding: 24px 0;
+      width: calc(55% - 16px);
+      &__buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        .button {
+          margin: 0 0 24px 0;
+        }
+      }
+    }
   }
 }
 // 750px
 @include sm-md {
   .profile {
+    &__inner {
+      flex-direction: column;
+    }
+    &Image {
+      width: 100%;
+      max-width: unset;
+    }
+    &Content {
+      padding: 0;
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 48px;
+      text-align: center;
+      order: -1;
+      &__buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      h1 {
+        margin-bottom: 8px;
+      }
+    }
   }
 }
 // 540px
 @include xsm-sm {
   .profile {
+    &__inner {
+      padding: 48px 0;
+    }
   }
 }
